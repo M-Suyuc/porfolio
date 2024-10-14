@@ -1,0 +1,37 @@
+---
+import { proyects } from '@/data/proyects.json'
+import Proyect from './Proyect.astro'
+import type { Product } from '@/types'
+
+const typedProyects: Product[] = proyects
+---
+
+<section
+	id="proyects"
+	class="xs:px-6 mx-auto max-w-screen-lg px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0"
+>
+	<h3
+		class="my-12 ml-2 inline-flex w-full items-center text-2xl font-semibold text-primary opacity-85 sm:ml-0 md:text-3xl"
+	>
+		<span class="pr-3 text-muted-foreground"> 01.</span> Some of my favorite projects
+		<span class="ml-[0.2em] mt-1 h-0.5 grow bg-muted"></span>
+	</h3>
+
+	<div class="grid-template gap-8">
+		{
+			typedProyects.map((proyect, index) => {
+				return <Proyect proyect={proyect} index={index} />
+			})
+		}
+	</div>
+</section>
+
+<style is:global>
+	.title-section {
+	}
+
+	.grid-template {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+	}
+</style>

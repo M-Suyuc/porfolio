@@ -1,0 +1,51 @@
+{
+	"[javascript][typescript][json][astro][css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
+	},
+
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/.direnv": true,
+		"**/node_modules": true,
+		"**/.astro": true
+	},
+
+	"prettier.documentSelectors": [
+		"**/*.astro",
+		"**/*.svelte",
+		"**/.js",
+		"**/.jsx",
+		"**/.ts",
+		"**/.tsx",
+		"**/.json",
+		"**/.css",
+		"**/.glsl"
+	],
+
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"html",
+		"markdown",
+		"json",
+		"jsonc",
+		"yaml",
+		"toml",
+		"astro",
+		"svelte"
+	]
+}

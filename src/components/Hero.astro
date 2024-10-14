@@ -1,0 +1,82 @@
+---
+import { Github, Mail, Linkedin } from 'lucide-react'
+---
+
+<section class="xs:px-6 mx-auto max-w-screen-lg px-4 sm:px-8 lg:px-0">
+	<div class="items- flex flex-col-reverse justify-between sm:flex-row sm:gap-4 md:gap-8">
+		<div class="flex flex-col gap-0 sm:gap-2 md:gap-4">
+			<h1
+				class="h-fit text-balance text-3xl font-extrabold text-primary opacity-90 sm:text-4xl md:text-5xl md:font-extrabold md:tracking-wide lg:max-w-prose lg:text-[3.5rem]"
+			>
+				Hi, I'm <strong> Marlon Suyuc </strong>
+				<!-- Hey! I'm Marlon Suyuc -->
+			</h1>
+			<p class="text-2xl font-bold text-muted-foreground sm:text-3xl md:text-4xl md:tracking-wide">
+				I'm <span class="text-yellow-500">Web</span>
+				Developer
+			</p>
+		</div>
+
+		<div
+			class="-mt-2 mb-6 mr-10 aspect-square size-24 overflow-clip rounded-full object-cover shadow-[0px_0px_50px_-5px_rgba(204,204,204,0.41)] sm:mb-0 md:order-1 md:-mt-4 md:size-32 lg:-mt-2 lg:size-40 2xl:-mt-0 [@media(width>=37rem)]:mr-14"
+		>
+			<img src="/img-profile.png" alt="Imagen perfil" class="relative right-0.5 top-0.5" />
+		</div>
+	</div>
+
+	<p class="mt-5 max-w-[58ch] text-pretty text-base text-foreground/70 sm:text-xl md:text-2xl">
+		I love writing code that takes things next level creating highly performant websites, <b
+			>automated</b
+		> API integrations, building my own <b>dev-tools</b>, and creating stunning user-experiences
+		that makes you feel
+		<span class="text-yellow-500"> WOW!. </span>
+		Currently, I'm learning about <b>Astro</b>
+	</p>
+
+	<!-- Social -->
+	<section class="flex justify-center gap-6 py-4 md:justify-start">
+		<a
+			href="https://www.linkedin.com/in/marlon-suyuc/"
+			target="_blank"
+			rel="noreferrer"
+			class="h-fit rounded-md p-2 hover:bg-secondary"
+		>
+			<Linkedin className="size-8 text-muted-foreground hover:text-primary" />
+		</a>
+		<a
+			href="https://github.com/M-Suyuc/"
+			rel="noreferrer"
+			target="_blank"
+			class="h-fit rounded-md p-2 hover:bg-secondary"
+		>
+			<Github className="size-8 text-muted-foreground hover:text-primary" />
+		</a>
+		<a
+			href="mailto:marlonsuyuc@gmail.com"
+			rel="noreferrer"
+			class="h-fit rounded-md p-2 hover:bg-secondary"
+		>
+			<Mail className="size-8 text-muted-foreground hover:text-primary" />
+		</a>
+	</section>
+</section>
+
+<style>
+	strong {
+		animation: textAnimate 5s linear infinite;
+		background-image: linear-gradient(45deg, #7028e4, #ee95d5, #7028e4);
+		background-size: 200%;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+
+	@keyframes textAnimate {
+		0% {
+			background-position: 0;
+		}
+		100% {
+			background-position: 200%;
+		}
+	}
+</style>

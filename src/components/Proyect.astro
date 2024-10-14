@@ -1,0 +1,110 @@
+---
+import { clsx } from 'clsx'
+import { Github, LinkIcon } from 'lucide-react'
+import { getGradientClasses } from '@/utils/getGradientClass'
+import type { Product } from '@/types'
+
+export interface Props {
+	index: number
+	proyect: Product
+}
+
+const { index, proyect } = Astro.props
+const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
+---
+
+<article
+	class={clsx(
+		'relative flex h-fit flex-col rounded-xl bg-clip-padding p-4 overflow-hidden',
+		getGradientClasses(index)
+	)}
+>
+	<div class="relative h-full">
+		<figure class="h-[130px] w-full">
+			<img
+				alt={title}
+				src={img}
+				class="rounded-t-lg object-cover object-center [mask-image:linear-gradient(180deg,#fff_16.35%,rgb(255_255_255_/_0%)_91.66%)]"
+			/>
+		</figure>
+
+		<header>
+			<h4
+				class="text-2xl font-bold tracking-tight text-gray-900 text-primary first-letter:uppercase"
+			>
+				{title}
+			</h4>
+
+			<div
+				class:list={[
+					'scroll-container flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight text-primary/80',
+					{}
+				]}
+			>
+				{
+					lenguages.map((lenguage) => {
+						return (
+							<h3 class="flex select-none items-center whitespace-nowrap rounded bg-gray-900/30 px-1.5 py-[3px] text-xs font-normal">
+								{lenguage}
+							</h3>
+						)
+					})
+				}
+			</div>
+		</header>
+
+		<main class="mt-1 text-[15px] font-light tracking-tight text-neutral-300">
+			<p class="line-clamp-4">{content}</p>
+		</main>
+
+		<footer class="z-50 flex w-full items-end justify-end gap-2 pt-2">
+			{
+				enlaceGithub && (
+					<a href={enlaceGithub} target="_blanck" rel="noreferrer" class="h-fit rounded-md p-1">
+						<Github className="size-5 text-neutral-200 hover:text-neutral-400" />
+					</a>
+				)
+			}
+
+			{
+				enlaceWeb && (
+					<a
+						href={enlaceWeb}
+						target="_blanck"
+						rel="noreferrer"
+						class="h-fit rounded-md p-1"
+						aria-describedby="ver sitio"
+					>
+						<LinkIcon className="size-5 text-neutral-200 hover:text-neutral-400" />
+					</a>
+				)
+			}
+		</footer>
+	</div>
+</article>
+
+<style>
+	.scroll-container::-webkit-scrollbar {
+		display: none;
+	}
+
+	@media (width > 640px) {
+		article:nth-child(odd):hover {
+			scale: 1.02;
+			transition-duration: 0.2s;
+		}
+		article:nth-child(even):hover {
+			scale: 1.02;
+			transition-duration: 0.2s;
+		}
+	}
+</style>
+
+<script>
+	const scrollContainer = document.querySelector('.scroll-container') as HTMLElement
+
+	scrollContainer?.addEventListener('wheel', (event: WheelEvent) => {
+		event.preventDefault()
+		scrollContainer.scrollLeft += event.deltaY
+	})
+</script>

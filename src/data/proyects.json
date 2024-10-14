@@ -1,0 +1,44 @@
+{
+	"proyects": [
+		{
+			"title": "ShortLink",
+			"img": "./proyects/shortLink.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/e-commerce",
+			"enlaceWeb": "https://short-m.vercel.app/",
+			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+		},
+		{
+			"title": "Ecommerce Admin",
+			"img": "./proyects/ecommerce-admin.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Admin",
+			"enlaceWeb": "https://e-commerce-admin-marlon.vercel.app/",
+			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+		},
+		{
+			"title": "Ecommerce Store",
+			"img": "./proyects/ecommerce-store.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Store",
+			"enlaceWeb": "https://shopping-cart-m.vercel.app/",
+			"lenguages": ["Next.js", "Shadcn", "Tailwind CSS", "Stripe"],
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+		},
+		{
+			"title": "API MVC",
+			"img": "./proyects/mvc.jpg",
+			"enlaceGithub": "https://github.com/M-Suyuc/rest-api-MVC",
+			"enlaceWeb": "https://rest-api-mvc-production.up.railway.app/movies",
+			"lenguages": ["Node.js", "Express.js", "Railway"],
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+		},
+		{
+			"title": "Shopping Cart",
+			"img": "./proyects/shopping-cart.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/Next.js-Commerce",
+			"enlaceWeb": "https://shopping-cart-m.vercel.app/",
+			"lenguages": ["React.js", "Redux Toolkit", "Tailwind CSS"],
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+		}
+	]
+}

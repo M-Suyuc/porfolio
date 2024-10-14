@@ -1,0 +1,74 @@
+---
+import { FolderCode, Mail, User } from 'lucide-react'
+import { Button } from './ui/button'
+
+const pages = [
+	{ name: 'Proyects', href: '#proyects', icon: FolderCode },
+	{ name: 'About', href: '#about', icon: User },
+	{ name: 'Contact', href: '#contact', icon: Mail }
+].map((page) => ({
+	...page,
+	active: Astro.url.pathname === page.href
+}))
+---
+
+<header class="xs:px-6 mx-auto hidden h-16 w-full px-4 text-center sm:px-8 md:flex lg:h-20 lg:px-0">
+	<nav class="h-h-full mx-auto flex w-full max-w-screen-lg items-center justify-between">
+		<div class="flex items-center gap-7">
+			{
+				pages.map(({ name, href, active, icon: Icon }) => (
+					<a
+						href={href}
+						class:list={[
+							'flex cursor-pointer items-center gap-[6px] font-medium hover:text-muted-foreground',
+							{ 'text-muted-foreground': active },
+							{ 'text-primary': !active }
+						]}
+					>
+						<Icon className="size-[18px]" />
+						{name}
+					</a>
+				))
+			}
+		</div>
+		<!-- <Button variant="outline" className="text-primary">Language</Button> -->
+	</nav>
+</header>
+
+<style>
+	header {
+		z-index: 500;
+		position: sticky;
+		top: 0;
+		left: 0;
+		animation: header linear both;
+		animation-timeline: scroll(root block);
+		animation-range: 0 200px;
+	}
+	nav a.active {
+		color: gray;
+	}
+	@keyframes header {
+		to {
+			background-color: rgb(0, 0, 0);
+		}
+	}
+</style>
+<script>
+	let secctions = document.querySelectorAll('section')
+	const links = document.querySelectorAll('nav a')
+	window.onscroll = () => {
+		secctions.forEach((sec) => {
+			let top = window.scrollY
+			let offset = sec.offsetTop
+			let height = sec.offsetHeight
+			let id = sec.getAttribute('id')
+			if (top >= offset && top < offset + height) {
+				links.forEach((link) => {
+					link.classList.remove('active')
+					document.querySelector('a[href*=' + id + ']')?.classList.add('active')
+				})
+			}
+		})
+	}
+</script>

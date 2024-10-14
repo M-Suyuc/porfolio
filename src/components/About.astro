@@ -1,0 +1,238 @@
+---
+import { ArrowRight, MapPin } from 'lucide-react'
+import { ToolboxItem } from '@/components/ToolboxItem'
+import {
+	Astro as Astroo,
+	Css,
+	Git,
+	Github,
+	Html,
+	JavaScript,
+	Nextjs,
+	Prisma,
+	React,
+	Tailwind,
+	TypeScript
+} from '@/components/icons/index'
+
+const toolboxItem = [
+	{
+		title: 'React',
+		icon: React
+	},
+	{
+		title: 'CSS',
+		icon: Css
+	},
+	{
+		title: 'Tailwind',
+		icon: Tailwind
+	},
+	{
+		title: 'TypeScript',
+		icon: TypeScript
+	},
+	{
+		title: 'HTML',
+		icon: Html
+	},
+	{
+		title: 'JavaScript',
+		icon: JavaScript
+	},
+	{
+		title: 'Prisma',
+		icon: Prisma
+	},
+	{
+		title: 'Next.js',
+		icon: Nextjs
+	},
+	{
+		title: 'Github',
+		icon: Github
+	},
+	{
+		title: 'Git',
+		icon: Git
+	},
+	{
+		title: 'Astro',
+		icon: Astroo
+	}
+]
+---
+
+<!--
+sm 640
+md 768
+lg 1024
+
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+-->
+<section
+	id="about"
+	class="xs:px-6 mx-auto max-w-screen-lg content-center px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0"
+>
+	<h3
+		class="my-12 ml-2 inline-flex w-full items-center text-2xl font-semibold text-primary opacity-85 sm:ml-0 md:text-3xl"
+	>
+		<span class="pr-3 text-muted-foreground"> 02.</span>
+		A little more about me
+		<span class="ml-[0.2em] mt-1 h-0.5 grow bg-muted"></span>
+	</h3>
+
+	<div class="bento *:overflow-clip *:rounded-xl *:border *:text-primary">
+		<article class="gradient-firt flex flex-col justify-center gap-0 p-6 md:gap-4 md:pt-8">
+			<header class="size-10 overflow-hidden rounded-full"><img src="/avatar.svg" alt="" /></header>
+			<main class="text-2xl md:text-4xl">
+				Hi, I'm <b>Marlon</b>. <span class="text-primary-foreground">
+					I build cool websites like this one.
+				</span>
+			</main>
+			<button class="repo-btn mt-2 inline-flex w-fit items-center gap-2 px-4 py-3.5 md:mt-0">
+				Contact me <ArrowRight />
+			</button>
+		</article>
+
+		<article class="gradient-second p-4">
+			<header class="text-xl">My ToolBox</header>
+			<main class="flex flex-col gap-2 text-sm text-neutral-400">
+				Explore the tecnologies and tools i use
+				<div class="flex">
+					<div class="flex flex-none animate-move-left gap-3 [animation-duration:40s]">
+						{
+							[...new Array(2)].map((_, index) => (
+								<>
+									{toolboxItem.map((item) => (
+										<div class="inline-flex items-center gap-2 rounded-lg px-3 py-2 outline outline-2 outline-white/10">
+											<item.icon class="size-5 object-cover" />
+											<span class="font-semibold">{item.title}</span>
+										</div>
+									))}
+								</>
+							))
+						}
+					</div>
+				</div>
+				<div class="flex -translate-x-full pt-2">
+					<div class="flex flex-none animate-move-right gap-3 [animation-duration:20s]">
+						{
+							[...new Array(2)].map((_, index) => (
+								<>
+									{toolboxItem.map((item) => (
+										<div class="inline-flex items-center gap-2 rounded-lg px-3 py-2 outline outline-2 outline-white/10">
+											<item.icon class="size-5 object-cover" />
+											<span class="font-semibold">{item.title}</span>
+										</div>
+									))}
+								</>
+							))
+						}
+					</div>
+				</div>
+			</main>
+		</article>
+
+		<article class="gradient-thrird flex flex-col items-center justify-center gap-4 p-6 md:p-8">
+			<MapPin className="size-8 text-primary" />
+			<span class="flag text-3xl font-bold">Guatemala</span>
+		</article>
+		<article class="gradient-fourth p-4">
+			<main class="flex h-full items-center justify-center text-pretty text-xl text-neutral-300">
+				My passion is building cool stuff. I build primarily with React, Tailwind CSS and Prisma. I
+				love this stack so much that I even built a website about it.
+			</main>
+		</article>
+	</div>
+</section>
+
+<style>
+	.flag {
+		background: linear-gradient(to right, white 36%, blue 36% 73%, white 70%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 48px;
+	}
+
+	.repo-btn {
+		border: 1px solid hsla(0, 0%, 100%, 0.7);
+		border-radius: 6px;
+		background: rgba(249, 250, 251, 0.2);
+		color: #fff;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: -0.3px;
+	}
+
+	.bento {
+		display: grid;
+		grid-template-areas:
+			'one one one one'
+			'two two two two'
+			'four four four four'
+			'three three three three';
+		gap: 1rem;
+	}
+
+	@media (width > 640px) {
+		.bento {
+			grid-template-areas:
+				'one one four four'
+				'two two three three';
+		}
+	}
+
+	@media (width > 868px) {
+		.bento {
+			grid-template-areas:
+				'one one two three'
+				'one one four four';
+		}
+	}
+
+	.gradient-firt {
+		grid-area: one;
+		background: linear-gradient(227deg, #c0adff, #6457c6 95.09%);
+		overflow: hidden;
+		&:hover {
+			transform: translateY(-0.1rem);
+			transition: 0.2s;
+		}
+	}
+	.gradient-second {
+		grid-area: two;
+		background: linear-gradient(61deg, #000 20.68%, #393d33 99.76%);
+		overflow: hidden;
+		&:hover {
+			transform: translateY(-0.1rem);
+			transition: 0.2s;
+		}
+	}
+	.gradient-thrird {
+		grid-area: three;
+		background: transparent;
+		overflow: hidden;
+		&:hover {
+			transform: translateY(-0.1rem);
+			transition: 0.2s;
+		}
+	}
+	.gradient-fourth {
+		grid-area: four;
+		background: linear-gradient(72deg, #3a6df0 3.09%, #ee95d5 96.55%);
+		background: linear-gradient(0deg, #000 20.68%, #393d33 99.76%);
+
+		overflow: hidden;
+		&:hover {
+			transform: translateY(-0.1rem);
+			transition: 0.2s;
+		}
+	}
+</style>
