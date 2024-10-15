@@ -6,7 +6,7 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/e-commerce",
 			"enlaceWeb": "https://short-m.vercel.app/",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management, allowing users to manage their shortened URLs easily and securely."
 		},
 		{
 			"title": "Ecommerce Admin",
@@ -14,7 +14,7 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Admin",
 			"enlaceWeb": "https://e-commerce-admin-marlon.vercel.app/",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+			"content": "It facilitates the management of online stores, allowing you to manage products, categories and orders efficiently. Built with Next.js, Prisma and Shadcn, it offers a control panel optimized for productivity, accompanied by a minimalist design thanks to Tailwind CSS."
 		},
 		{
 			"title": "Ecommerce Store",
@@ -22,7 +22,7 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Store",
 			"enlaceWeb": "https://shopping-cart-m.vercel.app/",
 			"lenguages": ["Next.js", "Shadcn", "Tailwind CSS", "Stripe"],
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+			"content": "Offers a complete online shopping experience, with Stripe integration for secure payments. Built with the above Admin eCommerce API, its fluid and modern interface ensures a streamlined user experience, while the shopping cart and checkout flow are intuitive and functional."
 		},
 		{
 			"title": "API MVC",
@@ -30,7 +30,7 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/rest-api-MVC",
 			"enlaceWeb": "https://rest-api-mvc-production.up.railway.app/movies",
 			"lenguages": ["Node.js", "Express.js", "Railway"],
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+			"content": "Backend solution that follows the Model-View-Controller (MVC) architecture pattern. It allows CRUD operations to be performed on a movie database, offering a robust service deployed on Railway."
 		},
 		{
 			"title": "Shopping Cart",
@@ -38,7 +38,7 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/Next.js-Commerce",
 			"enlaceWeb": "https://shopping-cart-m.vercel.app/",
 			"lenguages": ["React.js", "Redux Toolkit", "Tailwind CSS"],
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo necessitatibus quam nemo tenetur! Dolore inventore provident molestiae nam impedit, sapiente dignissimos, exercitationem aliquid quo obcaecati quisquam similique esse fuga pariatur."
+			"content": "Allows users to add and manage products in a shopping cart, providing an interactive and agile experience. The application efficiently manages the status of the cart, functional for any device."
 		}
 	]
 }
