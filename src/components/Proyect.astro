@@ -15,11 +15,11 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 
 <article
 	class={clsx(
-		'relative flex h-fit flex-col rounded-xl bg-clip-padding p-4 overflow-hidden',
+		'relative flex  min-h-[345px] flex-col rounded-xl bg-clip-padding p-4 overflow-hidden',
 		getGradientClasses(index)
 	)}
 >
-	<div class="relative h-full">
+	<div class="relative flex h-full flex-col">
 		<figure class="h-[130px] w-full">
 			<img
 				alt={title}
@@ -29,9 +29,7 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 		</figure>
 
 		<header>
-			<h4
-				class="text-2xl font-bold tracking-tight text-gray-900 text-primary first-letter:uppercase"
-			>
+			<h4 class="text-2xl font-bold tracking-tight text-primary first-letter:uppercase">
 				{title}
 			</h4>
 
@@ -53,7 +51,7 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 			</div>
 		</header>
 
-		<main class="mt-1 text-[15px] font-light tracking-tight text-neutral-300">
+		<main class="mt-1 text-pretty text-[15px] font-light tracking-tighter text-neutral-300">
 			<p class="line-clamp-4">{content}</p>
 		</main>
 
