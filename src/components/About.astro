@@ -1,6 +1,5 @@
 ---
 import { ArrowRight, MapPin } from 'lucide-react'
-import { ToolboxItem } from '@/components/ToolboxItem'
 import {
 	Astro as Astroo,
 	Css,
@@ -112,7 +111,7 @@ xl	1280px	@media (min-width: 1280px) { ... }
 				<div class="flex">
 					<div class="flex flex-none animate-move-left gap-3 [animation-duration:40s]">
 						{
-							[...new Array(2)].map((_, index) => (
+							[...new Array(2)].map((_, _index) => (
 								<>
 									{toolboxItem.map((item) => (
 										<div class="inline-flex items-center gap-2 rounded-lg px-3 py-2 outline outline-2 outline-white/10">
