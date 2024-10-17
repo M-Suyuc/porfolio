@@ -1,20 +1,26 @@
-export const ToolboxItem = ({
-	items
+import { Button } from '@/components/ui/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import type React from 'react'
+
+export function TooltipItem({
+	children,
+	content
 }: {
-	items: {
-		title: string
-		icon: string
-	}[]
-}) => {
+	children: React.JSX.Element
+	content: string
+}) {
 	return (
-		<div className="[animation-duration:30s]">
-			{items.map((item) => (
-				<div className="inline-flex items-center gap-2 rounded-lg px-3 py-2 outline outline-2 outline-white/10">
-					{/* <item.icon className='size-10 object-cover' /> */}
-					{item.icon}
-					<span className="font-semibold">{item.title}</span>
-				</div>
-			))}
-		</div>
+		<TooltipProvider delayDuration={100}>
+			<Tooltip delayDuration={100}>
+				<TooltipTrigger asChild>
+					<Button variant="ghost" size="icon" className="size-12 p-2 text-muted-foreground">
+						{children}
+					</Button>
+				</TooltipTrigger>
+				<TooltipContent side="bottom">
+					<p>{content}</p>
+				</TooltipContent>
+			</Tooltip>
+		</TooltipProvider>
 	)
 }

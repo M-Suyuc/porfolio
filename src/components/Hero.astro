@@ -1,15 +1,15 @@
 ---
 import { Github, Mail, Linkedin } from 'lucide-react'
+import { TooltipItem } from './ToolboxItem'
 ---
 
 <section class="xs:px-6 mx-auto max-w-screen-lg px-4 sm:px-8 lg:px-0">
-	<div class="items- flex flex-col-reverse justify-between sm:flex-row sm:gap-4 md:gap-8">
+	<div class="flex flex-col-reverse justify-between sm:flex-row sm:gap-4 md:gap-8">
 		<div class="flex flex-col gap-0 sm:gap-2 md:gap-4">
 			<h1
 				class="h-fit text-balance text-3xl font-extrabold text-primary opacity-90 sm:text-4xl md:text-5xl md:font-extrabold md:tracking-wide lg:max-w-prose lg:text-[3.5rem]"
 			>
 				Hi, I'm <strong> Marlon Suyuc </strong>
-				<!-- Hey! I'm Marlon Suyuc -->
 			</h1>
 			<p class="text-2xl font-bold text-muted-foreground sm:text-3xl md:text-4xl md:tracking-wide">
 				I'm <span class="text-yellow-500">Web</span>
@@ -24,7 +24,9 @@ import { Github, Mail, Linkedin } from 'lucide-react'
 		</div>
 	</div>
 
-	<p class="mt-5 max-w-[58ch] text-pretty text-base text-foreground/70 sm:text-xl md:text-2xl">
+	<p
+		class="mt-5 max-w-[58ch] text-pretty text-base text-foreground/70 sm:text-xl md:mt-0 md:text-2xl"
+	>
 		I love writing code that takes things next level creating highly performant websites, <b
 			>automated</b
 		> API integrations, building my own <b>dev-tools</b>, and creating stunning user-experiences
@@ -34,30 +36,22 @@ import { Github, Mail, Linkedin } from 'lucide-react'
 	</p>
 
 	<!-- Social -->
-	<section class="flex justify-center gap-6 py-4 md:justify-start">
-		<a
-			href="https://www.linkedin.com/in/marlon-suyuc/"
-			target="_blank"
-			rel="noreferrer"
-			class="h-fit rounded-md p-2 hover:bg-secondary"
-		>
-			<Linkedin className="size-8 text-muted-foreground hover:text-primary" />
-		</a>
-		<a
-			href="https://github.com/M-Suyuc/"
-			rel="noreferrer"
-			target="_blank"
-			class="h-fit rounded-md p-2 hover:bg-secondary"
-		>
-			<Github className="size-8 text-muted-foreground hover:text-primary" />
-		</a>
-		<a
-			href="mailto:marlonsuyuc@gmail.com"
-			rel="noreferrer"
-			class="h-fit rounded-md p-2 hover:bg-secondary"
-		>
-			<Mail className="size-8 text-muted-foreground hover:text-primary" />
-		</a>
+	<section class="flex justify-center gap-4 pt-6 md:justify-start md:pt-4">
+		<TooltipItem content="Linkedin" client:load>
+			<a href="https://www.linkedin.com/in/marlon-suyuc/" target="_blank" rel="noreferrer">
+				<Linkedin className="size-8" />
+			</a>
+		</TooltipItem>
+		<TooltipItem content="GitHub" client:load>
+			<a href="https://github.com/M-Suyuc/" rel="noreferrer" target="_blank">
+				<Github className="size-8" />
+			</a>
+		</TooltipItem>
+		<TooltipItem content="Email" client:load>
+			<a href="mailto:marlonsuyuc@gmail.com" rel="noreferrer">
+				<Mail className="size-8" />
+			</a>
+		</TooltipItem>
 	</section>
 </section>
 
