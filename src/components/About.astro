@@ -1,5 +1,5 @@
 ---
-import { ArrowRight, MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import {
 	Astro as Astroo,
 	Css,
@@ -62,18 +62,10 @@ const toolboxItem = [
 ]
 ---
 
-<!--
-sm 640
-md 768
-lg 1024
-
-sm	640px	@media (min-width: 640px) { ... }
-md	768px	@media (min-width: 768px) { ... }
-lg	1024px	@media (min-width: 1024px) { ... }
-xl	1280px	@media (min-width: 1280px) { ... }
-2xl	1536px	@media (min-width: 1536px) { ... }
--->
-<section id="about" class="xs:px-6 mx-auto max-w-screen-lg px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0">
+<section
+	id="about"
+	class="xs:px-6 relative mx-auto max-w-screen-lg px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0"
+>
 	<h3
 		class="my-12 ml-2 inline-flex w-full items-center text-2xl font-semibold text-primary opacity-85 sm:ml-0 md:text-3xl"
 	>
@@ -83,10 +75,10 @@ xl	1280px	@media (min-width: 1280px) { ... }
 	</h3>
 
 	<div class="bento *:overflow-clip *:rounded-xl *:border *:text-primary">
-		<article class="gradient-firt flex flex-col justify-center gap-0 p-6 md:gap-4 md:pt-8">
+		<article class="gradient-firt flex flex-col justify-center gap-0 p-4 md:gap-4 md:pt-8">
 			<header class="size-10 overflow-hidden rounded-full"><img src="/avatar.svg" alt="" /></header>
-			<main class="text-2xl md:text-4xl">
-				Hi, I'm <b>Marlon</b>. <span class="text-primary-foreground">
+			<main class="text-3xl md:text-5xl">
+				Hi, I'm <b>Marlon</b>. <span class="font-medium text-primary-foreground">
 					I build cool websites like this one.
 				</span>
 			</main>
@@ -100,9 +92,9 @@ xl	1280px	@media (min-width: 1280px) { ... }
 			</a>
 		</article>
 
-		<article class="gradient-second p-4">
-			<header class="text-xl">My ToolBox</header>
-			<main class="flex flex-col gap-2 text-sm text-neutral-400">
+		<article class="gradient-second px-4 py-3">
+			<header class="text-xl text-foreground/90">My ToolBox</header>
+			<main class="flex flex-col gap-2 text-foreground/70">
 				Explore the tecnologies and tools i use
 				<div class="flex">
 					<div class="flex flex-none animate-move-left gap-3 [animation-duration:40s]">
@@ -140,11 +132,11 @@ xl	1280px	@media (min-width: 1280px) { ... }
 		</article>
 
 		<article class="gradient-thrird flex flex-col items-center justify-center gap-4 p-6 md:p-8">
-			<MapPin className="size-8 text-primary" />
 			<span class="flag text-3xl font-bold">Guatemala</span>
 		</article>
-		<article class="gradient-fourth p-4">
-			<main class="flex h-full items-center justify-center text-pretty text-xl text-neutral-300">
+
+		<article class="gradient-fourth bg-gradient-to-b from-slate-900 to-black p-4">
+			<main class="flex h-full items-center justify-center text-pretty text-lg text-foreground/85">
 				My passion is building cool stuff. I build primarily with React, Astro, Tailwind CSS and
 				Prisma. I love this stack so much that I even built a website about it.
 			</main>
@@ -154,7 +146,7 @@ xl	1280px	@media (min-width: 1280px) { ... }
 
 <style>
 	.flag {
-		background: linear-gradient(to right, white 36%, blue 36% 73%, white 70%);
+		background: linear-gradient(to right, blue 37%, white 36% 73%, blue 70%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-size: 48px;
@@ -200,7 +192,8 @@ xl	1280px	@media (min-width: 1280px) { ... }
 
 	.gradient-firt {
 		grid-area: one;
-		background: linear-gradient(227deg, #c0adff, #6457c6 95.09%);
+		background: linear-gradient(210deg, #a68ef6 0%, #6e63f3 100%);
+
 		overflow: hidden;
 		&:hover {
 			transform: translateY(-0.1rem);
@@ -209,7 +202,7 @@ xl	1280px	@media (min-width: 1280px) { ... }
 	}
 	.gradient-second {
 		grid-area: two;
-		background: linear-gradient(61deg, #000 20.68%, #393d33 99.76%);
+
 		overflow: hidden;
 		&:hover {
 			transform: translateY(-0.1rem);
@@ -225,11 +218,9 @@ xl	1280px	@media (min-width: 1280px) { ... }
 			transition: 0.2s;
 		}
 	}
+
 	.gradient-fourth {
 		grid-area: four;
-		background: linear-gradient(72deg, #3a6df0 3.09%, #ee95d5 96.55%);
-		background: linear-gradient(0deg, #000 20.68%, #393d33 99.76%);
-
 		overflow: hidden;
 		&:hover {
 			transform: translateY(-0.1rem);

@@ -29,13 +29,13 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 		</figure>
 
 		<header>
-			<h4 class="text-2xl font-bold tracking-tight text-primary first-letter:uppercase">
+			<h4 class="text-2xl font-bold tracking-tight text-primary/85 first-letter:uppercase">
 				{title}
 			</h4>
 
 			<div
 				class:list={[
-					'scroll-container flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight text-primary/80',
+					'scroll-container flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight text-primary',
 					{}
 				]}
 			>
@@ -51,29 +51,23 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 			</div>
 		</header>
 
-		<main class="mt-1 text-pretty text-[15px] font-light tracking-tighter text-neutral-300">
+		<main class="mt-1 text-pretty text-base font-light tracking-tighter text-foreground/95">
 			<p class="line-clamp-4">{content}</p>
 		</main>
 
-		<footer class="z-50 flex w-full items-end justify-end gap-2 pt-2">
+		<footer class="z-50 flex w-full items-end justify-end gap-4 pt-2">
 			{
 				enlaceGithub && (
-					<a href={enlaceGithub} target="_blanck" rel="noreferrer" class="h-fit rounded-md p-1">
-						<Github className="size-5 text-neutral-200 hover:text-neutral-400" />
+					<a href={enlaceGithub} target="_blanck" rel="noreferrer">
+						<Github className="size-6 text-foreground/70 hover:text-foreground" />
 					</a>
 				)
 			}
 
 			{
 				enlaceWeb && (
-					<a
-						href={enlaceWeb}
-						target="_blanck"
-						rel="noreferrer"
-						class="h-fit rounded-md p-1"
-						aria-describedby="ver sitio"
-					>
-						<LinkIcon className="size-5 text-neutral-200 hover:text-neutral-400" />
+					<a href={enlaceWeb} target="_blanck" rel="noreferrer" aria-describedby="ver sitio">
+						<LinkIcon className="size-6 text-foreground/70 hover:text-foreground" />
 					</a>
 				)
 			}

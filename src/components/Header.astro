@@ -25,9 +25,9 @@ const pages = [
 					<a
 						href={href}
 						class:list={[
-							'flex cursor-pointer items-center gap-[6px] font-medium hover:text-muted-foreground',
-							{ 'text-muted-foreground': active },
-							{ 'text-primary': !active }
+							'flex cursor-pointer items-center gap-[6px] font-medium hover:text-foreground/80',
+							{ 'text-foreground/80': active },
+							{ 'text-foreground/95': !active }
 						]}
 					>
 						<Icon className="size-[18px]" />
