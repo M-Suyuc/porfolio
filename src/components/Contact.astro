@@ -4,7 +4,7 @@
 
 <section
 	id="contact"
-	class="xs:px-6 mx-auto max-w-screen-lg px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0"
+	class="xs:px-6 mx-auto max-w-screen-lg px-4 pb-10 sm:px-8 md:pb-16 md:pt-[3rem] lg:px-0"
 >
 	<h3
 		class="my-12 ml-2 inline-flex w-full items-center text-2xl font-semibold text-primary opacity-85 sm:ml-0 md:text-3xl"
@@ -13,4 +13,97 @@
 		Send me a message
 		<span class="ml-[0.2em] mt-1 h-0.5 grow bg-muted"></span>
 	</h3>
+
+	<div class="relative isolate">
+		<div
+			class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+			aria-hidden="true"
+		>
+			<div
+				class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+				style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+			>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2">
+			<section class="content-center border-muted pb-10 text-foreground/80 md:border-r md:px-4">
+				<h3 class="text-3xl md:text-5xl">What Do You Think?</h3>
+				<p class="text-xl">
+					Have feedback? Maybe some questions? Whatever it is, i'd love to hear from you.
+				</p>
+			</section>
+			<section class="md:px-4">
+				<form action="#" method="POST" class="mx-auto max-w-lg">
+					<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+						<div class="col-span-2">
+							<label for="first-name" class="block text-sm/6 font-semibold text-foreground/80"
+								>Name</label
+							>
+							<div class="mt-2.5">
+								<input
+									type="text"
+									name="first-name"
+									id="first-name"
+									autocomplete="given-name"
+									required
+									class="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
+								/>
+							</div>
+						</div>
+
+						<div class="col-span-2">
+							<label for="email" class="block text-sm/6 font-semibold text-foreground/80"
+								>Email</label
+							>
+							<div class="mt-2.5">
+								<input
+									type="email"
+									name="email"
+									id="email"
+									required
+									autocomplete="email"
+									class="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
+								/>
+							</div>
+						</div>
+
+						<div class="col-span-2">
+							<label for="message" class="block text-sm/6 font-semibold text-foreground/80"
+								>Message</label
+							>
+							<div class="mt-2.5">
+								<textarea
+									name="message"
+									id="message"
+									rows="4"
+									required
+									class="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
+								></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="mt-5 md:mt-10">
+						<button
+							type="submit"
+							class="gradient-firt block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white"
+							>SUBMIT COMMENT</button
+						>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
 </section>
+
+<style>
+	.gradient-firt {
+		grid-area: one;
+		background: linear-gradient(210deg, #a68ef6 0%, #6e63f3 100%);
+
+		&:hover {
+			transform: translateY(-0.1rem);
+			transition: 0.2s;
+		}
+	}
+</style>
