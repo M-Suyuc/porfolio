@@ -9,6 +9,13 @@
 			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management, allowing users to manage their shortened URLs easily and securely."
 		},
 		{
+			"title": "Hackthon Cloudinary",
+			"img": "./proyects/hackathon.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/Hackathon-Cloudinary",
+			"lenguages": ["Astro.js", "Tailwind CSS", "SDK Cloudinary"],
+			"content": "I developed a Halloween-themed project focused on adding or removing elements from users' images. I demonstrated skills in creativity, problem-solving"
+		},
+		{
 			"title": "Ecommerce Admin",
 			"img": "./proyects/ecommerce-admin.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Admin",
