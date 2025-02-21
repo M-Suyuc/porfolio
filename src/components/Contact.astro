@@ -1,5 +1,5 @@
 ---
-
+import Formulario from './formulario'
 ---
 
 <section
@@ -34,76 +34,39 @@
 				</p>
 			</section>
 			<section class="md:px-4">
-				<form action="#" method="POST" class="mx-auto max-w-lg">
-					<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-						<div class="col-span-2">
-							<label for="first-name" class="block text-sm/6 font-semibold text-foreground/80"
-								>Name</label
-							>
-							<div class="mt-2.5">
-								<input
-									type="text"
-									name="first-name"
-									id="first-name"
-									autocomplete="given-name"
-									required
-									class="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
-								/>
-							</div>
-						</div>
-
-						<div class="col-span-2">
-							<label for="email" class="block text-sm/6 font-semibold text-foreground/80"
-								>Email</label
-							>
-							<div class="mt-2.5">
-								<input
-									type="email"
-									name="email"
-									id="email"
-									required
-									autocomplete="email"
-									class="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
-								/>
-							</div>
-						</div>
-
-						<div class="col-span-2">
-							<label for="message" class="block text-sm/6 font-semibold text-foreground/80"
-								>Message</label
-							>
-							<div class="mt-2.5">
-								<textarea
-									name="message"
-									id="message"
-									rows="4"
-									required
-									class="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
-								></textarea>
-							</div>
-						</div>
-					</div>
-					<div class="mt-5 md:mt-10">
-						<button
-							type="submit"
-							class="gradient-firt block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white"
-							>SUBMIT COMMENT</button
-						>
-					</div>
-				</form>
+				<Formulario client:load />
 			</section>
 		</div>
 	</div>
 </section>
 
-<style>
+<style is:global>
 	.gradient-firt {
 		grid-area: one;
 		background: linear-gradient(210deg, #a68ef6 0%, #6e63f3 100%);
+	}
+	.btndisable {
+		pointer-events: none;
+		opacity: 0.3;
+	}
 
-		&:hover {
-			transform: translateY(-0.1rem);
-			transition: 0.2s;
+	.loader {
+		display: none;
+		border: 3px solid #f3f3f3;
+		border-top: 3px solid transparent;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+		margin-right: 8px;
+	}
+	.loader.show {
+		display: inline-block;
+	}
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
 		}
 	}
 </style>
