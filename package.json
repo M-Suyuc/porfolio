@@ -13,6 +13,7 @@
 		"@astrojs/check": "0.9.3",
 		"@astrojs/react": "3.6.2",
 		"@astrojs/tailwind": "5.1.0",
+		"@emailjs/browser": "^4.4.1",
 		"@radix-ui/react-dialog": "^1.1.2",
 		"@radix-ui/react-slot": "1.1.0",
 		"@radix-ui/react-tooltip": "^1.1.2",
