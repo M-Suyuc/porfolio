@@ -12,7 +12,7 @@ export function TooltipItem({
 		<TooltipProvider delayDuration={100}>
 			<Tooltip delayDuration={100}>
 				<TooltipTrigger asChild>
-					<Button variant="ghost" size="icon" className="size-12 p-2 text-muted-foreground">
+					<Button variant="ghost" size="icon" className="size-12 p-2 text-white/80">
 						{children}
 					</Button>
 				</TooltipTrigger>

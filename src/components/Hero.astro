@@ -3,30 +3,30 @@ import { Github, Mail, Linkedin } from 'lucide-react'
 import { TooltipItem } from '@/components/ToolboxItem'
 ---
 
-<section class="xs:px-6 mx-auto max-w-screen-lg px-4 sm:px-8 lg:px-0">
+<section class="xs:px-6 mx-auto mt-24 max-w-screen-lg px-4 sm:px-8 lg:px-0">
 	<div class="flex flex-col-reverse justify-between sm:flex-row sm:gap-4 md:gap-8">
 		<div class="flex flex-col gap-0 sm:gap-2 md:gap-4">
 			<h1
-				class="h-fit text-balance text-3xl font-extrabold text-primary opacity-90 sm:text-4xl md:text-5xl md:font-extrabold md:tracking-wide lg:max-w-prose lg:text-[3.5rem]"
+				class="h-fit max-w-[20ch] text-balance text-3xl font-extrabold text-white/80 sm:text-4xl md:text-5xl md:tracking-wide lg:max-w-prose lg:text-6xl"
 			>
 				Hi, I'm <strong> Marlon Suyuc </strong>
 			</h1>
-			<p class="text-2xl font-bold text-foreground/80 sm:text-3xl md:text-4xl md:tracking-wide">
+			<p
+				class="pb-4 text-2xl font-semibold text-foreground/80 sm:text-3xl md:text-5xl md:tracking-wide"
+			>
 				I'm <span class="text-yellow-500">Web</span>
 				Developer
 			</p>
 		</div>
 
-		<div
+		<!-- <div
 			class="-mt-2 mb-6 mr-10 aspect-square size-24 overflow-clip rounded-full object-cover shadow-[0px_0px_50px_-5px_rgba(204,204,204,0.41)] sm:mb-0 md:order-1 md:-mt-4 md:size-32 lg:-mt-2 lg:size-40 2xl:-mt-0 [@media(width>=37rem)]:mr-14"
 		>
 			<img src="/img-profile.png" alt="Imagen perfil" />
-		</div>
+		</div> -->
 	</div>
 
-	<p
-		class="mt-12 max-w-[58ch] text-pretty text-base text-foreground/80 sm:text-xl md:mt-0 md:text-2xl"
-	>
+	<p class="max-w-[58ch] text-pretty text-white/80 sm:text-xl md:mt-0 md:text-2xl">
 		I love writing code that takes things next level creating highly performant websites, <b
 			>automated</b
 		> API integrations, building my own <b>dev-tools</b>, and creating stunning user-experiences
@@ -39,17 +39,17 @@ import { TooltipItem } from '@/components/ToolboxItem'
 	<section class="flex justify-center gap-4 pt-6 md:justify-start md:pt-4">
 		<TooltipItem content="Linkedin" client:load>
 			<a href="https://www.linkedin.com/in/marlon-suyuc/" target="_blank" rel="noreferrer">
-				<Linkedin className="size-8" />
+				<Linkedin className="size-9" />
 			</a>
 		</TooltipItem>
 		<TooltipItem content="GitHub" client:load>
 			<a href="https://github.com/M-Suyuc/" rel="noreferrer" target="_blank">
-				<Github className="size-8" />
+				<Github className="size-9" />
 			</a>
 		</TooltipItem>
 		<TooltipItem content="Email" client:load>
 			<a href="mailto:marlonsuyuc@gmail.com" rel="noreferrer">
-				<Mail className="size-8" />
+				<Mail className="size-9" />
 			</a>
 		</TooltipItem>
 	</section>
