@@ -6,46 +6,43 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/e-commerce",
 			"enlaceWeb": "https://short-m.vercel.app/",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
-			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management, allowing users to manage their shortened URLs easily and securely."
+			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management."
 		},
 		{
 			"title": "Hackthon Cloudinary",
 			"img": "./proyects/hackathon.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Hackathon-Cloudinary",
 			"lenguages": ["Astro.js", "Tailwind CSS", "SDK Cloudinary"],
-			"content": "I developed a Halloween-themed project focused on adding or removing elements from users' images. I demonstrated skills in creativity, problem-solving"
+			"content": "Halloween-themed project focused on adding or removing elements from user images. I demonstrated creativity and problem-solving skills."
+		},
+		{
+			"title": "Challenge FACTUS",
+			"img": "./proyects/factus.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/Factus-Generate-invoices",
+			"enlaceWeb": "https://factus-generate-invoices.vercel.app/dashboard",
+			"lenguages": ["Next.js", "Tailwind CSS", "Shadcn"],
+			"content": "Challenge by a Colombian company, which consisted of creating a platform that allows the generation of invoices using their API."
 		},
 		{
 			"title": "Ecommerce Admin",
 			"img": "./proyects/ecommerce-admin.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Admin",
-			"enlaceWeb": "https://e-commerce-admin-marlon.vercel.app/",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
-			"content": "It facilitates the management of online stores, allowing you to manage products, categories and orders efficiently. Built with Next.js, Prisma and Shadcn, it offers a control panel optimized for productivity, accompanied by a minimalist design thanks to Tailwind CSS."
+			"content": "It facilitates the management of online stores, allowing you to manage products, categories and orders efficiently. It offers a control panel optimized for productivity"
 		},
 		{
 			"title": "Ecommerce Store",
 			"img": "./proyects/ecommerce-store.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Store",
-			"enlaceWeb": "https://shopping-cart-m.vercel.app/",
 			"lenguages": ["Next.js", "Shadcn", "Tailwind CSS", "Stripe"],
-			"content": "Offers a complete online shopping experience, with Stripe integration for secure payments. Built with the above Admin eCommerce API, its fluid and modern interface ensures a streamlined user experience, while the shopping cart and checkout flow are intuitive and functional."
+			"content": "Offers a complete online shopping experience, with Stripe integration for secure payments. Built with the above Admin eCommerce API."
 		},
 		{
 			"title": "API MVC",
 			"img": "./proyects/mvc.jpg",
 			"enlaceGithub": "https://github.com/M-Suyuc/rest-api-MVC",
-			"enlaceWeb": "https://rest-api-mvc-production.up.railway.app/movies",
 			"lenguages": ["Node.js", "Express.js", "Railway"],
-			"content": "Backend solution that follows the Model-View-Controller (MVC) architecture pattern. It allows CRUD operations to be performed on a movie database, offering a robust service deployed on Railway."
-		},
-		{
-			"title": "Shopping Cart",
-			"img": "./proyects/shopping-cart.png",
-			"enlaceGithub": "https://github.com/M-Suyuc/Next.js-Commerce",
-			"enlaceWeb": "https://shopping-cart-m.vercel.app/",
-			"lenguages": ["React.js", "Redux Toolkit", "Tailwind CSS"],
-			"content": "Allows users to add and manage products in a shopping cart, providing an interactive and agile experience. The application efficiently manages the status of the cart, functional for any device."
+			"content": "Backend solution that follows the Model-View-Controller (MVC) architecture pattern. It allows CRUD operations to be performed on a movie database, deployed on Railway."
 		}
 	]
 }
