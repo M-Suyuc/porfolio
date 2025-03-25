@@ -15,34 +15,31 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 
 <article
 	class={clsx(
-		'relative flex  h-[380px] flex-col rounded-[8px]  p-3 overflow-hidden hover:scale-[1.02] transition-transform duration-300 ease-in-out',
+		'rounded-[8px] p-3 overflow-hidden hover:scale-[1.02] transition-transform duration-300 ease-in-out',
 		getGradientClasses(index)
 	)}
 >
-	<div class="relative flex h-full flex-col">
-		<figure class="max-h-[160px] w-full">
-			<img
-				alt={title}
-				src={img}
-				class="rounded-t-[8px] object-cover object-center [mask-image:linear-gradient(180deg,#fff_16.35%,rgb(255_255_255_/_0%)_91.66%)]"
-			/>
-		</figure>
+	<div class="flex h-full flex-col">
+		<img
+			alt={title}
+			src={img}
+			class="h-40 w-full rounded-t-[8px] object-fill object-center [mask-image:linear-gradient(180deg,#fff_16.35%,rgb(255_255_255_/_0%)_91.66%)]"
+		/>
 
 		<header>
-			<h4 class="text-2xl font-bold tracking-tight text-primary/85 first-letter:uppercase">
+			<h4 class="text-2xl font-bold tracking-tight text-primary/80 first-letter:uppercase">
 				{title}
 			</h4>
 
 			<div
 				class:list={[
-					'scroll-container flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight text-primary',
-					{}
+					'scroll-container flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight text-primary'
 				]}
 			>
 				{
 					lenguages.map((lenguage) => {
 						return (
-							<h3 class="flex select-none items-center whitespace-nowrap rounded bg-gray-900/30 px-1.5 py-[3px] text-xs font-normal">
+							<h3 class="flex select-none items-center whitespace-nowrap rounded bg-gray-900/30 px-1.5 py-[3px] text-sm font-light">
 								{lenguage}
 							</h3>
 						)
@@ -51,11 +48,11 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 			</div>
 		</header>
 
-		<main class="mt-1 text-pretty text-base font-light tracking-tighter text-foreground/95">
-			<p class="line-clamp-4">{content}</p>
+		<main class="mt-1 flex-grow text-pretty font-light tracking-tighter text-foreground/95">
+			<p class="line-clamp-4 h-full">{content}</p>
 		</main>
 
-		<footer class="z-50 flex w-full items-end justify-end gap-4 pt-2">
+		<footer class="z-50 flex w-full items-end justify-end gap-4 pt-3">
 			{
 				enlaceGithub && (
 					<a href={enlaceGithub} target="_blanck" rel="noreferrer">

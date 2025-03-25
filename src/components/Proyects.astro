@@ -14,7 +14,7 @@ const typedProyects: Product[] = proyects
 		<span class="ml-[0.2em] mt-1 h-0.5 grow bg-muted"></span>
 	</h3>
 
-	<div class="grid-template">
+	<div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 		{
 			typedProyects.map((proyect, index) => {
 				return <Proyect proyect={proyect} index={index} />
@@ -26,7 +26,6 @@ const typedProyects: Product[] = proyects
 <style is:global>
 	.title-section {
 	}
-
 	.grid-template {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
