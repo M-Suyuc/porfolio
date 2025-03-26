@@ -3,22 +3,22 @@ import { FolderCode, Mail, User } from 'lucide-react'
 import { DrawerDemo } from './render-Drawer'
 
 const pages = [
-	{ name: 'Proyects', href: '#proyects', icon: FolderCode },
-	{ name: 'About', href: '#about', icon: User },
-	{ name: 'Contact', href: '#contact', icon: Mail }
+	{ label: 'Proyects', href: '#proyects', icon: FolderCode },
+	{ label: 'About', href: '#about', icon: User },
+	{ label: 'Contact', href: '#contact', icon: Mail }
 ].map((page) => ({
 	...page,
 	active: Astro.url.pathname === page.href
 }))
 ---
 
-<header class="mx-auto hidden h-16 w-full text-center sm:flex lg:h-20">
+<header class="fixed top-0 z-50 mx-auto hidden h-16 w-full text-center sm:flex lg:h-20">
 	<nav
-		class="xs:px-6 h-h-full mx-auto flex w-full max-w-screen-lg items-center justify-between px-4 sm:px-8 lg:px-0"
+		class="xs:px-6 h-h-full mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-8 lg:px-0"
 	>
 		<div class="flex items-center gap-10">
 			{
-				pages.map(({ name, href, active, icon: Icon }) => (
+				pages.map(({ label, href, active, icon: Icon }) => (
 					<a
 						href={href}
 						class:list={[
@@ -28,54 +28,46 @@ const pages = [
 						]}
 					>
 						<Icon className="size-[18px]" />
-						{name}
+						{label}
 					</a>
 				))
 			}
 		</div>
 	</nav>
 </header>
+
 <header class="px-4 py-2 sm:hidden">
-	<DrawerDemo client:load>
-		<div class="space-y-8 py-12 text-center">
-			{
-				pages.map(({ name, href, active, icon: Icon }) => (
-					<a
-						href={href}
-						class:list={[
-							'flex cursor-pointer items-center justify-center gap-[6px] border-b border-neutral-900/50 pb-1 font-medium hover:text-muted-foreground',
-							{ 'text-muted-foreground': active },
-							{ 'text-primary': !active }
-						]}
-					>
-						<Icon className="size-[18px]" />
-						{name}
-					</a>
-				))
-			}
-		</div>
-	</DrawerDemo>
+	<DrawerDemo client:load />
 </header>
 
 <style>
 	header {
-		z-index: 500;
-		position: sticky;
-		top: 0;
-		left: 0;
-		animation: header linear both;
-		animation-timeline: scroll(root block);
-		animation-range: 0 200px;
+		background: transparent;
+		animation: header-blur-scroll 0.3s linear both;
+		animation-timeline: scroll();
+		animation-range: 0 250px;
+		border-bottom: 1px solid transparent;
 	}
+
+	@keyframes header-blur-scroll {
+		0% {
+			backdrop-filter: blur(0px);
+			background: transparent;
+		}
+
+		100% {
+			backdrop-filter: blur(10px);
+			background: rgba(0, 0, 0, 0.5);
+			padding-bottom: var(--spacing-6);
+			border-bottom-color: black;
+		}
+	}
+
 	nav a.active {
 		color: gray;
 	}
-	@keyframes header {
-		to {
-			background-color: rgb(0, 0, 0);
-		}
-	}
 </style>
+
 <script>
 	let secctions = document.querySelectorAll('section')
 	const links = document.querySelectorAll('nav a')
