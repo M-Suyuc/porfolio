@@ -6,14 +6,22 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/e-commerce",
 			"enlaceWeb": "https://short-m.vercel.app/",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
-			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management."
+			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management"
 		},
 		{
 			"title": "Hackthon Cloudinary",
 			"img": "./proyects/hackathon.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Hackathon-Cloudinary",
 			"lenguages": ["Astro.js", "Tailwind CSS", "SDK Cloudinary"],
-			"content": "Halloween-themed project focused on adding or removing elements from user images. I demonstrated creativity and problem-solving skills."
+			"content": "Halloween-themed project focused on adding or removing elements from user images. I demonstrated creativity and problem-solving skills"
+		},
+		{
+			"title": "mls-shop",
+			"img": "./proyects/mls-shop.png",
+			"enlaceGithub": "https://github.com/M-Suyuc/shop-mls",
+			"enlaceWeb": "https://shop-mls.vercel.app/",
+			"lenguages": ["Next.js", "Tailwind CSS", "Prisma", "Paypal"],
+			"content": "Final project for Fernando Herrera's Nexjs course on an e-commerce site based on Tesla Shop with PayPal integration"
 		},
 		{
 			"title": "Challenge FACTUS",
@@ -21,7 +29,7 @@
 			"enlaceGithub": "https://github.com/M-Suyuc/Factus-Generate-invoices",
 			"enlaceWeb": "https://factus-generate-invoices.vercel.app/dashboard",
 			"lenguages": ["Next.js", "Tailwind CSS", "Shadcn"],
-			"content": "Challenge by a Colombian company, which consisted of creating a platform that allows the generation of invoices using their API."
+			"content": "Challenge by a Colombian company, which consisted of creating a platform that allows the generation of invoices using their API"
 		},
 		{
 			"title": "Ecommerce Admin",
@@ -35,14 +43,14 @@
 			"img": "./proyects/ecommerce-store.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Store",
 			"lenguages": ["Next.js", "Shadcn", "Tailwind CSS", "Stripe"],
-			"content": "Offers a complete online shopping experience, with Stripe integration for secure payments. Built with the above Admin eCommerce API."
+			"content": "Offers a complete online shopping experience, with Stripe integration for secure payments. Built with the above Admin eCommerce API"
 		},
 		{
 			"title": "API MVC",
 			"img": "./proyects/mvc.jpg",
 			"enlaceGithub": "https://github.com/M-Suyuc/rest-api-MVC",
 			"lenguages": ["Node.js", "Express.js", "Railway"],
-			"content": "Backend solution that follows the Model-View-Controller (MVC) architecture pattern. It allows CRUD operations to be performed on a movie database, deployed on Railway."
+			"content": "Backend solution that follows the Model-View-Controller (MVC) architecture pattern. It allows CRUD operations to be performed on a movie database, deployed on Railway"
 		}
 	]
 }
