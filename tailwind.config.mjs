@@ -1,6 +1,3 @@
-import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
-import svgToDataUri from 'mini-svg-data-uri'
-
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: ['class'],
@@ -83,27 +80,5 @@ export default {
 			}
 		}
 	},
-	plugins: [
-		require('tailwindcss-animate'),
-		// i dont using  the  function if dont use i must delete dependenci
-		function ({ matchUtilities, theme }) {
-			matchUtilities(
-				{
-					'bg-grid': (value) => {
-						// console.log(value); // VAlue =  rgb(255 255 255 / 0.02)
-						const svg = {
-							backgroundImage: `url("${svgToDataUri(
-								`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="60" height="60" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
-							)}")`
-						}
-						// console.log(svg);
-						/* {backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='60' height='60' fill='none' stroke='rgb(255 255 255 / 0.02)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`} */
-
-						return svg
-					}
-				},
-				{ values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
-			)
-		}
-	]
+	plugins: [require('tailwindcss-animate')]
 }

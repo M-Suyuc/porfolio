@@ -74,18 +74,6 @@
 	}
 }
 
-/* @layer components {
-	.button {
-		@apply inline-flex items-center gap-2 rounded-lg bg-transparent fill-black px-3 py-2 font-semibold text-black outline outline-1 outline-[#006fee] hover:bg-black/10 dark:fill-white dark:text-white dark:hover:bg-white/10 md:text-lg;
-	}
-	.title-section {
-		@apply mb-8 text-center text-5xl font-extrabold tracking-wide text-[#006fee] shadow-yellow-700 drop-shadow-lg md:mb-[4rem];
-	}
-	.text {
-		@apply mb-3 max-w-prose text-gray-500 dark:text-gray-400 md:text-lg md:tracking-tight;
-	}
-} */
-
 .b {
 	border: solid 0.1px rgb(165, 165, 165);
 }
