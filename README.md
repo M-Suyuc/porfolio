@@ -1,10 +1,7 @@
-# Portfolio Website
+# 👨‍💻 Portfolio Website
 
 <div style="display: flex; align-items: center; gap: 1rem;">
   <p>Welcome to my personal portfolio! This site showcases my projects, skills, and experiences. Feel free to explore and learn more about me.</p>
- <a href="https://marlon-suyuc.vercel.app/">
-<img src="https://marlon-suyuc.vercel.app/hero.webp">
-</a>
 </div>
 
 ## 🌟 Features
