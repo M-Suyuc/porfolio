@@ -123,7 +123,7 @@ layer(base);
 	}
 }
 
-/* @layer base {
+@layer base {
 	* {
 		@apply border-border;
 	}
@@ -131,7 +131,7 @@ layer(base);
 	body {
 		@apply bg-black;
 	}
-} */
+}
 
 @layer utilities {
 	* {
