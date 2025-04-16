@@ -44,11 +44,12 @@ const Formulario = () => {
 			setLoading(false)
 		}
 	}
+
 	return (
 		<form onSubmit={handleSubmit} className="max-w-lg md:mx-auto">
 			<div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 				<div className="col-span-2">
-					<label htmlFor="name" className="block text-sm/6 font-semibold text-foreground/80">
+					<label htmlFor="name" className="text-foreground/80 block text-sm/6 font-semibold">
 						Name
 					</label>
 					<div className="mt-2.5">
@@ -60,14 +61,14 @@ const Formulario = () => {
 							onPaste={handlePaste}
 							autoComplete="give name"
 							required
-							className="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
+							className="block w-full rounded-md border px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
 						/>
 						{error && <div style={{ color: 'red' }}>{error}</div>}
 					</div>
 				</div>
 
 				<div className="col-span-2">
-					<label htmlFor="email" className="block text-sm/6 font-semibold text-foreground/80">
+					<label htmlFor="email" className="text-foreground/80 block text-sm/6 font-semibold">
 						Email
 					</label>
 					<div className="mt-2.5">
@@ -79,14 +80,14 @@ const Formulario = () => {
 							value={formData.user_email}
 							required
 							autoComplete="email"
-							className="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
+							className="block w-full rounded-md border px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
 						/>
 						{error && <div style={{ color: 'red' }}>{error}</div>}
 					</div>
 				</div>
 
 				<div className="col-span-2">
-					<label htmlFor="message" className="block text-sm/6 font-semibold text-foreground/80">
+					<label htmlFor="message" className="text-foreground/80 block text-sm/6 font-semibold">
 						Message
 					</label>
 					<div className="mt-2.5">
@@ -96,7 +97,7 @@ const Formulario = () => {
 							value={formData.message}
 							rows={4}
 							required
-							className="block w-full rounded-md px-3.5 py-2 text-primary-foreground outline-none sm:text-sm/6"
+							className="block w-full rounded-md border px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
 						/>
 					</div>
 				</div>
@@ -105,9 +106,9 @@ const Formulario = () => {
 				<button
 					disabled={loading}
 					type="submit"
-					className="m-4 rounded-md bg-gradient-to-r from-indigo-400 to-purple-500 p-0.5"
+					className="m-4 cursor-pointer rounded-md bg-linear-to-r from-indigo-400 to-purple-500 p-0.5"
 				>
-					<span className="block rounded-md bg-black px-4 py-2 font-semibold text-white/80 hover:bg-opacity-70">
+					<span className="block rounded-md bg-black px-4 py-2 font-semibold text-white/80 hover:opacity-85">
 						{loading ? 'Sending...' : 'Send message'}
 					</span>
 				</button>
