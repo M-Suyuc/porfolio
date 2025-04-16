@@ -27,13 +27,13 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 		/>
 
 		<header>
-			<h4 class="text-2xl font-bold tracking-tight text-primary/80 first-letter:uppercase">
+			<h4 class="text-primary/80 text-2xl font-bold tracking-tight first-letter:uppercase">
 				{title}
 			</h4>
 
 			<div
 				class:list={[
-					'scroll-container flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight text-primary'
+					'scroll-container text-primary flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight'
 				]}
 			>
 				{
@@ -48,7 +48,7 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 			</div>
 		</header>
 
-		<main class="mt-1 flex-grow text-pretty font-light tracking-tighter text-foreground/95">
+		<main class="text-foreground/95 mt-1 grow text-pretty font-light tracking-tighter">
 			<p class="line-clamp-4 h-full">{content}</p>
 		</main>
 
