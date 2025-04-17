@@ -61,7 +61,7 @@ const Formulario = () => {
 							onPaste={handlePaste}
 							autoComplete="give name"
 							required
-							className="block w-full rounded-md border px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
+							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
 						/>
 						{error && <div style={{ color: 'red' }}>{error}</div>}
 					</div>
@@ -80,7 +80,7 @@ const Formulario = () => {
 							value={formData.user_email}
 							required
 							autoComplete="email"
-							className="block w-full rounded-md border px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
+							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
 						/>
 						{error && <div style={{ color: 'red' }}>{error}</div>}
 					</div>
@@ -97,7 +97,7 @@ const Formulario = () => {
 							value={formData.message}
 							rows={4}
 							required
-							className="block w-full rounded-md border px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
+							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
 						/>
 					</div>
 				</div>
