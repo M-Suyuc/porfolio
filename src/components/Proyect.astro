@@ -1,8 +1,9 @@
 ---
 import { clsx } from 'clsx'
-import { Github, LinkIcon } from 'lucide-react'
+import { LinkIcon } from 'lucide-react'
 import { getGradientClasses } from '@/utils/getGradientClass'
 import type { Product } from '@/types'
+import Github from '@/assets/svg/github.svg'
 
 export interface Props {
 	index: number
@@ -23,7 +24,7 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 		<img
 			alt={title}
 			src={img}
-			class="h-40 w-full rounded-t-[8px] object-fill object-center [mask-image:linear-gradient(180deg,#fff_16.35%,rgb(255_255_255_/_0%)_91.66%)]"
+			class="h-40 w-full rounded-t-[8px] [mask-image:linear-gradient(180deg,#fff_16.35%,rgb(255_255_255_/_0%)_91.66%)] object-cover object-top sm:object-fill"
 		/>
 
 		<header>
@@ -33,13 +34,13 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 
 			<div
 				class:list={[
-					'scroll-container text-primary flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth whitespace-nowrap tracking-tight'
+					'scroll-container text-primary flex cursor-grabbing items-center gap-2 overflow-x-auto scroll-smooth tracking-tight whitespace-nowrap'
 				]}
 			>
 				{
 					lenguages.map((lenguage) => {
 						return (
-							<h3 class="flex select-none items-center whitespace-nowrap rounded bg-gray-900/30 px-1.5 py-[3px] text-sm font-light">
+							<h3 class="flex items-center rounded bg-gray-900/30 px-1.5 py-[3px] text-sm font-light whitespace-nowrap select-none">
 								{lenguage}
 							</h3>
 						)
@@ -48,7 +49,7 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 			</div>
 		</header>
 
-		<main class="text-foreground/95 mt-1 grow text-pretty font-light tracking-tighter">
+		<main class="text-foreground/95 mt-1 grow font-light tracking-tighter text-pretty">
 			<p class="line-clamp-4 h-full">{content}</p>
 		</main>
 
@@ -56,7 +57,7 @@ const { title, enlaceGithub, enlaceWeb, lenguages, content, img } = proyect
 			{
 				enlaceGithub && (
 					<a href={enlaceGithub} target="_blanck" rel="noreferrer">
-						<Github className="size-6 text-foreground/70 hover:text-foreground" />
+						<Github class="text-foreground/70 hover:text-foreground size-6" />
 					</a>
 				)
 			}
