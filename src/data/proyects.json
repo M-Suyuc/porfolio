@@ -9,6 +9,14 @@
 			"content": "Web application designed to simplify and customize long URLs, turning them into short, easy-to-share links. This platform also includes user authentication and link management"
 		},
 		{
+			"title": "ms-ui-toast",
+			"img": "./proyects/ms-ui-toast.webp",
+			"enlaceGithub": "https://github.com/M-Suyuc/toast-library",
+			"enlaceWeb": "https://www.npmjs.com/package/ms-ui-toast",
+			"lenguages": ["tsup", "React", "Typescript", "CSS"],
+			"content": "A minimalist React library. Fast, accessible, and easy to integrate into any modern project"
+		},
+		{
 			"title": "Hackthon Cloudinary",
 			"img": "./proyects/hackathon.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Hackathon-Cloudinary",
