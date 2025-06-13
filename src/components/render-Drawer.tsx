@@ -11,7 +11,7 @@ import { FolderCode, Mail, Menu, User } from 'lucide-react'
 import { useState } from 'react'
 
 const pages = [
-	{ label: 'Proyects', href: '#proyects', icon: FolderCode },
+	{ label: 'Projects', href: '#projects', icon: FolderCode },
 	{ label: 'About', href: '#about', icon: User },
 	{ label: 'Contact', href: '#contact', icon: Mail }
 ]
@@ -41,7 +41,7 @@ export function DrawerDemo() {
 								href={href}
 								onClick={() => setOpen(false)}
 								className={clsx([
-									'flex cursor-pointer items-center justify-center gap-[6px] border-b border-neutral-900/50 py-4 font-medium hover:text-muted-foreground'
+									'hover:text-muted-foreground flex cursor-pointer items-center justify-center gap-[6px] border-b border-neutral-900/50 py-4 font-medium'
 								])}
 							>
 								<Icon className="size-[18px]" />

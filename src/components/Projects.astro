@@ -1,12 +1,12 @@
 ---
-import { proyects } from '@/data/proyects.json'
-import Proyect from './Proyect.astro'
+import { projects } from '@/data/projects.json'
+import Proyect from './Project.astro'
 import type { Product } from '@/types'
 
-const typedProyects: Product[] = proyects
+const typedProjects: Product[] = projects
 ---
 
-<section id="proyects" class="xs:px-6 mx-auto max-w-6xl px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0">
+<section id="projects" class="xs:px-6 mx-auto max-w-6xl px-4 pb-16 sm:px-8 md:pt-[3rem] lg:px-0">
 	<h3
 		class="text-primary my-12 ml-2 inline-flex w-full items-center text-2xl font-semibold opacity-85 sm:ml-0 md:text-3xl"
 	>
@@ -16,7 +16,7 @@ const typedProyects: Product[] = proyects
 
 	<div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 		{
-			typedProyects.map((proyect, index) => {
+			typedProjects.map((proyect, index) => {
 				return <Proyect proyect={proyect} index={index} />
 			})
 		}

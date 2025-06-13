@@ -1,8 +1,8 @@
 {
-	"proyects": [
+	"projects": [
 		{
 			"title": "ShortLink",
-			"img": "./proyects/shortLink.png",
+			"img": "./projects/shortLink.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/e-commerce",
 			"enlaceWeb": "https://short-m.vercel.app/",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
@@ -10,7 +10,7 @@
 		},
 		{
 			"title": "ms-ui-toast",
-			"img": "./proyects/ms-ui-toast.webp",
+			"img": "./projects/ms-ui-toast.webp",
 			"enlaceGithub": "https://github.com/M-Suyuc/toast-library",
 			"enlaceWeb": "https://www.npmjs.com/package/ms-ui-toast",
 			"lenguages": ["tsup", "React", "Typescript", "CSS"],
@@ -18,14 +18,14 @@
 		},
 		{
 			"title": "Hackthon Cloudinary",
-			"img": "./proyects/hackathon.png",
+			"img": "./projects/hackathon.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Hackathon-Cloudinary",
 			"lenguages": ["Astro.js", "Tailwind CSS", "SDK Cloudinary"],
 			"content": "Halloween-themed project focused on adding or removing elements from user images. I demonstrated creativity and problem-solving skills"
 		},
 		{
 			"title": "mls-shop",
-			"img": "./proyects/mls-shop.png",
+			"img": "./projects/mls-shop.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/shop-mls",
 			"enlaceWeb": "https://shop-mls.vercel.app/",
 			"lenguages": ["Next.js", "Tailwind CSS", "Prisma", "Paypal"],
@@ -33,7 +33,7 @@
 		},
 		{
 			"title": "Challenge FACTUS",
-			"img": "./proyects/factus.png",
+			"img": "./projects/factus.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Factus-Generate-invoices",
 			"enlaceWeb": "https://factus-generate-invoices.vercel.app/dashboard",
 			"lenguages": ["Next.js", "Tailwind CSS", "Shadcn"],
@@ -41,21 +41,21 @@
 		},
 		{
 			"title": "Ecommerce Admin",
-			"img": "./proyects/ecommerce-admin.png",
+			"img": "./projects/ecommerce-admin.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Admin",
 			"lenguages": ["Next.js", "Prisma", "Shadcn", "Tailwind CSS"],
 			"content": "It facilitates the management of online stores, allowing you to manage products, categories and orders efficiently. It offers a control panel optimized for productivity"
 		},
 		{
 			"title": "Ecommerce Store",
-			"img": "./proyects/ecommerce-store.png",
+			"img": "./projects/ecommerce-store.png",
 			"enlaceGithub": "https://github.com/M-Suyuc/Full-Stack-E-Commerce-Store",
 			"lenguages": ["Next.js", "Shadcn", "Tailwind CSS", "Stripe"],
 			"content": "Offers a complete online shopping experience, with Stripe integration for secure payments. Built with the above Admin eCommerce API"
 		},
 		{
 			"title": "API MVC",
-			"img": "./proyects/mvc.jpg",
+			"img": "./projects/mvc.jpg",
 			"enlaceGithub": "https://github.com/M-Suyuc/rest-api-MVC",
 			"lenguages": ["Node.js", "Express.js", "Railway"],
 			"content": "Backend solution that follows the Model-View-Controller (MVC) architecture pattern. It allows CRUD operations to be performed on a movie database, deployed on Railway"
