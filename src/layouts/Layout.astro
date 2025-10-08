@@ -24,8 +24,30 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body class="relative overflow-x-hidden">
+		<!-- Polyfills inline para máxima compatibilidad -->
+		<script>
+			if (!CSS.supports('animation-timeline', 'scroll()')) {
+				const script = document.createElement('script')
+				script.src = 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js'
+				document.head.appendChild(script)
+			}
+
+			if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
+				document.documentElement.classList.add('no-backdrop-filter')
+			}
+		</script>
+		{/* Top Fade Grid Background */}
 		<div
-			class="absolute -z-10 flex min-h-screen w-full overflow-hidden bg-black/[0.96] antialiased md:items-center md:justify-center"
+			class="absolute inset-0 -z-10 h-[100vh] border"
+			style={{
+				backgroundImage: `
+        linear-gradient(to right, #0D0D0D 1px, transparent 1px),
+        linear-gradient(to bottom, #0D0D0D 1px, transparent 1px)
+      `,
+				backgroundSize: '50px 50px',
+				WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
+				maskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)'
+			}}
 		>
 			<Spotlight />
 		</div>
