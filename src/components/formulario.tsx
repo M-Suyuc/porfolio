@@ -108,7 +108,7 @@ const Formulario = () => {
 					type="submit"
 					className="m-4 cursor-pointer rounded-md bg-linear-to-r from-indigo-400 to-purple-500 p-0.5"
 				>
-					<span className="block rounded-md bg-black px-4 py-2 font-semibold text-white/80 hover:opacity-85">
+					<span className="block rounded-md bg-black px-4 py-2 font-semibold text-white/80 hover:text-white hover:opacity-90">
 						{loading ? 'Sending...' : 'Send message'}
 					</span>
 				</button>
