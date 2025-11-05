@@ -6,10 +6,10 @@ const pages = [
 	{ label: 'Projects', href: '#projects', icon: FolderCode },
 	{ label: 'About', href: '#about', icon: User },
 	{ label: 'Contact', href: '#contact', icon: Mail }
-].map((page) => ({
-	...page,
-	active: Astro.url.pathname === page.href
-}))
+]
+
+const pathname = Astro.url.pathname
+console.log('🚀 ~ pathname:', pathname)
 ---
 
 <header class="fixed top-0 z-50 mx-auto hidden h-16 w-full text-center sm:flex lg:h-20">
@@ -18,16 +18,13 @@ const pages = [
 	>
 		<div class="flex items-center gap-10">
 			{
-				pages.map(({ label, href, active, icon: Icon }) => (
+				pages.map(({ label, href, icon: Icon }) => (
 					<a
 						href={href}
-						class:list={[
-							'hover:text-foreground/80 flex cursor-pointer items-center gap-[6px] font-medium',
-							{ 'text-foreground/95': !active },
-							{ 'text-red-800': active }
-						]}
+						class="nav-link flex cursor-pointer items-center gap-[6px] font-medium"
+						aria-current="false"
 					>
-						<Icon className="size-[18px]" />
+						<Icon className="icon size-[18px]" />
 						{label}
 					</a>
 				))
@@ -36,7 +33,7 @@ const pages = [
 	</nav>
 </header>
 
-<header class="px-4 py-2 sm:hidden">
+<header class="fixed top-0 z-50 w-full bg-transparent px-4 py-2 sm:hidden">
 	<DrawerDemo client:load />
 </header>
 
@@ -52,26 +49,39 @@ const pages = [
 		}
 	}
 
-	nav a.active {
-		color: gray;
+	nav a.nav-link {
+		opacity: 0.9;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	nav a.nav-link.active {
+		opacity: 1;
+		color: white;
 	}
 </style>
 
 <script>
-	let secctions = document.querySelectorAll('section')
-	const links = document.querySelectorAll('nav a')
-	window.onscroll = () => {
-		secctions.forEach((sec) => {
-			let top = window.scrollY
-			let offset = sec.offsetTop
-			let height = sec.offsetHeight
-			let id = sec.getAttribute('id')
-			if (top >= offset && top < offset + height) {
-				links.forEach((link) => {
+	const sections = document.querySelectorAll('section')
+	const navLinks = document.querySelectorAll('.nav-link')
+
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -80% 0px'
+	}
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				navLinks.forEach((link) => {
 					link.classList.remove('active')
-					document.querySelector('a[href*=' + id + ']')?.classList.add('active')
+					const href = link.getAttribute('href')
+					if (href === `#${entry.target.id}`) {
+						link.classList.add('active')
+					}
 				})
 			}
 		})
-	}
+	}, observerOptions)
+
+	sections.forEach((section) => observer.observe(section))
 </script>
