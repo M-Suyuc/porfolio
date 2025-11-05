@@ -28,10 +28,15 @@ export function DrawerDemo() {
 				noBodyStyles
 				onOpenChange={setOpen}
 			>
-				<Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
-					<Menu className="size-8 text-white/80" />
-					<span className="sr-only">Open menu</span>
-				</Button>
+				<div className="flex justify-between">
+					<Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
+						<Menu className="size-8 text-white/80" />
+						<span className="sr-only">Open menu</span>
+					</Button>
+					<a href="#">
+						<span className="font-mono text-xs font-extralight">M|S</span>
+					</a>
+				</div>
 
 				<DrawerContent className="text-white">
 					<DrawerHeader>
