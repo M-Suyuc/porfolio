@@ -165,3 +165,8 @@ body::-webkit-scrollbar {
 .b {
 	border: solid 0.1px rgb(165, 165, 165);
 }
+
+/* Avoid scaling the content when clicking on the mobile menu  */
+html {
+	overflow-y: scroll;
+}

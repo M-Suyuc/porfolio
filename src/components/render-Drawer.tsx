@@ -4,7 +4,8 @@ import {
 	DrawerContent,
 	DrawerDescription,
 	DrawerHeader,
-	DrawerTitle
+	DrawerTitle,
+	DrawerTrigger
 } from '@/components/ui/drawer'
 import clsx from 'clsx'
 import { FolderCode, Mail, Menu, User } from 'lucide-react'
@@ -23,20 +24,22 @@ export function DrawerDemo() {
 		<>
 			<Drawer
 				open={open}
-				disablePreventScroll
-				shouldScaleBackground
-				noBodyStyles
 				onOpenChange={setOpen}
+				shouldScaleBackground={false}
+				noBodyStyles
+				disablePreventScroll
 			>
-				<div className="flex justify-between">
-					<Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
-						<Menu className="size-8 text-white/80" />
-						<span className="sr-only">Open menu</span>
-					</Button>
-					<a href="#">
-						<span className="font-mono text-xs font-extralight">M|S</span>
-					</a>
-				</div>
+				<DrawerTrigger asChild>
+					<div className="flex justify-between">
+						<Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
+							<Menu className="size-8 text-white/80" />
+							<span className="sr-only">Open menu</span>
+						</Button>
+						<a href="#">
+							<span className="font-mono text-xs font-extralight">M|S</span>
+						</a>
+					</div>
+				</DrawerTrigger>
 
 				<DrawerContent className="text-white">
 					<DrawerHeader>
