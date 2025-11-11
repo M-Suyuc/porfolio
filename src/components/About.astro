@@ -34,8 +34,10 @@ import Marquee from './Marque.astro'
 		</article>
 
 		<article class="gradient-second py-3">
-			<header class="text-foreground/90 px-4 text-xl">My ToolBox</header>
-			<p class="flex flex-col gap-2 px-4">Explore the tecnologies and tools i use</p>
+			<header class="text-foreground px-4 text-xl">My ToolBox</header>
+			<p class="text-foreground/80 flex flex-col gap-2 px-4 font-light">
+				Explore the tecnologies and tools i use
+			</p>
 			<Marquee />
 		</article>
 
@@ -44,7 +46,9 @@ import Marquee from './Marque.astro'
 		</article>
 
 		<article class="gradient-fourth p-4">
-			<main class="text-foreground/85 flex h-full items-center justify-center text-lg text-pretty">
+			<main
+				class="text-foreground/80 flex h-full items-center justify-center text-lg font-light text-pretty"
+			>
 				My passion is building cool stuff. I build primarily with React, Astro, Tailwind CSS and
 				Prisma. I love this stack so much that I even built a website about it.
 			</main>
@@ -129,9 +133,11 @@ import Marquee from './Marque.astro'
 
 	.gradient-fourth {
 		grid-area: four;
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		/* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 		backdrop-filter: blur(2px);
-		-webkit-backdrop-filter: blur(2px);
+		-webkit-backdrop-filter: blur(2px); */
+		background: black;
+		filter: drop-shadow(0 0 90px rgba(31, 38, 135, 0.37));
 		border-radius: 10px;
 		overflow: hidden;
 		&:hover {

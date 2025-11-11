@@ -41,7 +41,7 @@ export function DrawerDemo() {
 					</div>
 				</DrawerTrigger>
 
-				<DrawerContent className="text-white">
+				<DrawerContent className="pb-4 text-white">
 					<DrawerHeader>
 						<DrawerTitle></DrawerTitle>
 						<DrawerDescription></DrawerDescription>
@@ -54,7 +54,7 @@ export function DrawerDemo() {
 								href={href}
 								onClick={() => setOpen(false)}
 								className={clsx([
-									'hover:text-muted-foreground flex cursor-pointer items-center justify-center gap-[6px] border-b border-neutral-900/50 py-4 font-medium'
+									'hover:text-muted-foreground flex cursor-pointer items-center justify-center gap-[6px] py-4 font-medium'
 								])}
 							>
 								<Icon className="size-[18px]" />

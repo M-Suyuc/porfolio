@@ -49,7 +49,7 @@ const Formulario = () => {
 		<form onSubmit={handleSubmit} className="max-w-lg md:mx-auto">
 			<div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 				<div className="col-span-2">
-					<label htmlFor="name" className="text-foreground/80 block text-sm/6 font-semibold">
+					<label htmlFor="name" className="text-foreground block text-sm/6 font-semibold">
 						Name
 					</label>
 					<div className="mt-2.5">
@@ -61,14 +61,15 @@ const Formulario = () => {
 							onPaste={handlePaste}
 							autoComplete="give name"
 							required
-							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
+							placeholder="Alexander Hamilton"
+							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-black/80 outline-hidden sm:text-sm"
 						/>
 						{error && <div style={{ color: 'red' }}>{error}</div>}
 					</div>
 				</div>
 
 				<div className="col-span-2">
-					<label htmlFor="email" className="text-foreground/80 block text-sm/6 font-semibold">
+					<label htmlFor="email" className="text-foreground block text-sm/6 font-semibold">
 						Email
 					</label>
 					<div className="mt-2.5">
@@ -80,14 +81,15 @@ const Formulario = () => {
 							value={formData.user_email}
 							required
 							autoComplete="email"
-							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
+							placeholder="alexander@gmail.com"
+							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-black/80 outline-1 sm:text-sm"
 						/>
 						{error && <div style={{ color: 'red' }}>{error}</div>}
 					</div>
 				</div>
 
 				<div className="col-span-2">
-					<label htmlFor="message" className="text-foreground/80 block text-sm/6 font-semibold">
+					<label htmlFor="message" className="text-foreground block text-sm/6 font-semibold">
 						Message
 					</label>
 					<div className="mt-2.5">
@@ -97,7 +99,8 @@ const Formulario = () => {
 							value={formData.message}
 							rows={4}
 							required
-							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-white outline-hidden invalid:text-pink-600 sm:text-sm/6"
+							placeholder="I have a question about..."
+							className="block w-full rounded-md border bg-white/90 px-3.5 py-2 text-black/80 outline-1 sm:text-sm"
 						/>
 					</div>
 				</div>
