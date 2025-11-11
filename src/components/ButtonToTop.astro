@@ -1,0 +1,46 @@
+---
+
+---
+
+<div
+	id="scrollButton"
+	class="fixed right-6 bottom-6 z-50 hidden translate-y-2 transform opacity-0 transition-opacity duration-300"
+>
+	<button>↑</button>
+</div>
+
+<style>
+	#scrollButton button {
+		background-color: rgba(0, 0, 0);
+		color: white;
+		outline: rgba(255, 255, 255, 0.243) 1px solid;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		font-size: 25px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.299));
+		transition: background-color 0.3s;
+	}
+
+	#scrollButton.show {
+		opacity: 1;
+		transform: translateY(0);
+		display: block;
+	}
+</style>
+<script>
+	const scrollButton = document.getElementById('scrollButton')!
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 350) {
+			scrollButton.classList.add('show')
+		} else {
+			scrollButton.classList.remove('show')
+		}
+	})
+
+	scrollButton.addEventListener('click', () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	})
+</script>
